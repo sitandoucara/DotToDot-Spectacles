@@ -1,0 +1,114 @@
+- !<AssetImportMetadata/bbdfd675-f7a5-4165-97ad-e2f450050619>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 77064e70-2e29-4aeb-8134-1a2d8a5556b0
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 77064e70-2e29-4aeb-8134-1a2d8a5556b0
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 1f04acac-964d-4aaf-8d5f-3256234ccfae
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/1f04acac-964d-4aaf-8d5f-3256234ccfae>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 8d416a78-7ca3-41f6-984a-4ae72dd97b84
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    applyDownloadedTexture: false
+    btn_trigger: false
+    btn_trigger_asset: false
+    btn_trigger_assets: false
+    cacheBust: false
+    downloadRetries: false
+    edgeFunctionUrl: false
+    fillFrame: false
+    hideAfterSeconds: false
+    internetModule: false
+    jpegQuality: false
+    loadingText: false
+    msgAlreadyShared: false
+    msgDownloaded: false
+    msgDownloading: false
+    msgError: false
+    msgProcessing: false
+    msgSuccess: false
+    remoteMediaModule: false
+    retryDelaySeconds: false
+    sourceImageObject: false
+    supabaseAnonKey: false
+    testImage: false
+    useTestImage: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - btn_trigger: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_trigger_asset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_trigger_assets: !<reference.Texture[]>
+        []
+      sourceImageObject: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      fillFrame: true
+      applyDownloadedTexture: true
+      cacheBust: true
+      downloadRetries: !<float> 3.000000
+      retryDelaySeconds: 0.800000
+      loadingText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      msgProcessing: Uploading photo...
+      msgDownloading: Fetching from cloud...
+      msgDownloaded: Loaded from cloud!
+      msgSuccess: Saved!
+      msgAlreadyShared: Photo shared!
+      msgError: Upload failed
+      hideAfterSeconds: !<float> 2.000000
+      internetModule: !<reference.InternetModule> 00000000-0000-0000-0000-000000000000
+      remoteMediaModule: !<reference.RemoteMediaModule> 00000000-0000-0000-0000-000000000000
+      edgeFunctionUrl: ""
+      supabaseAnonKey: ""
+      jpegQuality: !<float> 2.000000
+      useTestImage: false
+      testImage: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input SceneObject btn_trigger {\"hint\":\"Le bouton SHARE qui déclenche l'upload de la photo déjà capturée\"}"
+    - '// @input SceneObject btn_trigger_asset {"hint":"SceneObject qui reçoit la texture du bouton trigger. Laisser vide pour utiliser btn_trigger lui-même."}'
+    - '// @input Asset.Texture[] btn_trigger_assets = {} {"hint":"Textures bouton trigger : [0] = init, [1] = hover"}'
+    - '// @input SceneObject sourceImageObject {"hint":"Le SceneObject photoImage sur lequel PhotoCapture a appliqué la photo. On lit sa texture, puis on y réinjecte celle téléchargée."}'
+    - '// @input bool fillFrame = true {"hint":"ON = la photo remplit tout le cadre en gardant le ratio (rogne le surplus). OFF = la photo rentre entière. Doit matcher le réglage de PhotoCapture."}'
+    - "// @input bool applyDownloadedTexture = true {\"hint\":\"ON = après l'upload, retélécharge la photo depuis Supabase et la réaffiche (preuve visuelle pour la démo). OFF = upload simple.\"}"
+    - "// @input bool cacheBust = true {\"hint\":\"Ajoute ?t=<timestamp> à l'URL pour garantir un vrai téléchargement réseau (pas un cache).\"}"
+    - '// @input float downloadRetries = 3 {"hint":"Nombre de tentatives de téléchargement. Le CDN Supabase peut mettre une seconde à servir un fichier tout juste uploadé."}'
+    - '// @input float retryDelaySeconds = 0.8 {"hint":"Attente entre deux tentatives de téléchargement (secondes)."}'
+    - '// @input Component.Text loadingText {"hint":"Texte affiché pendant encode/upload/download et pour succès/erreur"}'
+    - "// @input string msgProcessing = \"Uploading photo...\" {\"hint\":\"Message pendant l'encodage + l'envoi\"}"
+    - '// @input string msgDownloading = "Fetching from cloud..." {"hint":"Message pendant le retéléchargement depuis Supabase"}'
+    - "// @input string msgDownloaded = \"Loaded from cloud!\" {\"hint\":\"Message final quand l'image affichée vient de Supabase\"}"
+    - '// @input string msgSuccess = "Saved!" {"hint":"Message final quand applyDownloadedTexture est OFF (upload seul)"}'
+    - '// @input string msgAlreadyShared = "Photo shared!" {"hint":"Message quand on retape SHARE sur une photo déjà partagée (2e, 3e tap...)"}'
+    - "// @input string msgError = \"Upload failed\" {\"hint\":\"Message en cas d'erreur\"}"
+    - '// @input float hideAfterSeconds = 2 {"hint":"Cacher le texte de statut X secondes après succès (0 = laisser affiché)"}'
+    - '// @input Asset.InternetModule internetModule {"hint":"Module Internet (Asset). Requis pour fetch() et makeResourceFromUrl()."}'
+    - "// @input Asset.RemoteMediaModule remoteMediaModule {\"hint\":\"Remote Media Module (Asset). Requis pour convertir l'URL en Texture.\"}"
+    - '// @input string edgeFunctionUrl {"hint":"URL complète de ta Supabase Edge Function (https://<project>.supabase.co/functions/v1/<name>)"}'
+    - '// @input string supabaseAnonKey {"hint":"Clé anon/api Supabase (envoyée en Authorization: Bearer + apikey)"}'
+    - '// @input float jpegQuality = 2 {"hint":"Qualité JPEG : 0=MaxCompression, 1=Low, 2=Intermediate, 3=High, 4=MaxQuality. 2 = bon compromis vitesse/taille."}'
+    - '// @input bool useTestImage {"hint":"ON = utilise testImage au lieu de lire sourceImageObject (test du pipeline dans le preview). OFF = vraie texture capturée."}'
+    - '// @input Asset.Texture testImage {"hint":"Texture source utilisée quand useTestImage est ON."}'

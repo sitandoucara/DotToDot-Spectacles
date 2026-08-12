@@ -1,0 +1,51 @@
+- !<AssetImportMetadata/739202e1-93cb-426e-a4a4-64edba5f3d68>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> a73097fe-597b-4153-830c-b71d0966275c
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> a73097fe-597b-4153-830c-b71d0966275c
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e9fd3b19-a470-4b2e-9540-cdf6f89488c1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e9fd3b19-a470-4b2e-9540-cdf6f89488c1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    btn_home: false
+    home_assets: false
+    home_texture: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - btn_home: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      home_texture: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      home_assets: !<reference.Texture[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject btn_home {"hint":"Le bouton Home"}'
+    - '// @input SceneObject home_texture {"hint":"SceneObject qui reçoit la texture du bouton Home"}'
+    - '// @input Asset.Texture[] home_assets = {} {"hint":"[0] selected base | [1] selected hover | [2] finish base | [3] finish hover"}'

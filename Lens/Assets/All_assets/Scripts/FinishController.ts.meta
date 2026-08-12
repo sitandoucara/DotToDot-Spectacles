@@ -1,0 +1,85 @@
+- !<AssetImportMetadata/aec5ad94-1277-4d26-8841-56f40f9901b5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> c017160e-d6b4-4dfe-a800-e896bf875373
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> c017160e-d6b4-4dfe-a800-e896bf875373
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> eb981a8e-fee7-4ab9-8f07-c91f86d5efe1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/eb981a8e-fee7-4ab9-8f07-c91f86d5efe1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bonus_assets: false
+    bonus_object: false
+    btn_finish: false
+    btn_show_hide: false
+    dot_eyes: false
+    eyes_info: false
+    finish_assets: false
+    finish_novisible: false
+    finish_texture: false
+    finish_visible: false
+    on_paper: false
+    onpaper_deco_asset: false
+    showhide_assets: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - btn_finish: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      finish_texture: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      finish_assets: !<reference.Texture[]>
+        []
+      btn_show_hide: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      showhide_assets: !<reference.Texture[]>
+        []
+      finish_visible: !<reference.SceneObject[]>
+        []
+      finish_novisible: !<reference.SceneObject[]>
+        []
+      on_paper: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      onpaper_deco_asset: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      bonus_object: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      bonus_assets: !<reference.Texture[]>
+        []
+      dot_eyes: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      eyes_info: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject btn_finish {"hint":"Le bouton Finish"}'
+    - '// @input SceneObject finish_texture {"hint":"SceneObject qui reçoit la texture du bouton Finish"}'
+    - '// @input Asset.Texture[] finish_assets = {} {"hint":"Textures bouton Finish : [0] = base, [1] = hover"}'
+    - '// @input SceneObject btn_show_hide {"hint":"Le bouton show/hide eyes"}'
+    - '// @input Asset.Texture[] showhide_assets = {} {"hint":"[0] show eyes base | [1] hide eyes base | [2] hover show | [3] hover hide"}'
+    - '// @input SceneObject[] finish_visible = {} {"hint":"Objets qui deviennent VISIBLES au tap sur Finish"}'
+    - '// @input SceneObject[] finish_novisible = {} {"hint":"Objets qui deviennent INVISIBLES au tap sur Finish"}'
+    - '// @input SceneObject on_paper {"hint":"Le SceneObject on_paper dont la texture change au tap Finish"}'
+    - '// @input Asset.Texture onpaper_deco_asset {"hint":"Texture déco appliquée sur on_paper au tap Finish"}'
+    - '// @input SceneObject bonus_object {"hint":"SceneObject bonus — visible dès le tap Finish"}'
+    - '// @input Asset.Texture[] bonus_assets = {} {"hint":"Textures bonus — même ordre que items[] dans DotPickerController"}'
+    - '// @input SceneObject dot_eyes {"hint":"SceneObject des yeux — togglé par le btn show/hide"}'
+    - "// @input SceneObject eyes_info {\"hint\":\"Indication pour les yeux — visible une seule fois à l'ouverture\"}"

@@ -1,0 +1,73 @@
+- !<AssetImportMetadata/6b9a9161-2156-494a-9e27-fcc8fd2e83e9>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> ecfae71b-dc9f-4cb5-ae16-fba15d165cb4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> ecfae71b-dc9f-4cb5-ae16-fba15d165cb4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> fe3a6ff0-9068-4faa-aa66-e451d562c859
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/fe3a6ff0-9068-4faa-aa66-e451d562c859>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 39c4e8af-cd69-4d2b-943f-0b1870d2e765
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    btn_container: false
+    enableLoggingLifecycle: false
+    game_container: false
+    paper_anim: false
+    paper_loading: false
+    start_table: false
+    text_phase2: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - game_container: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_container: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      start_table: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      paper_loading: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      paper_anim: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      text_phase2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      enableLoggingLifecycle: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Placement</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">TableTop — Palm detection</span>"}'
+    - // @input SceneObject game_container
+    - // @input SceneObject btn_container
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Phase 1 — Scan</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Visible au démarrage, flotte devant la caméra</span>"}'
+    - // @input SceneObject start_table
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Phase 2 — Loading</span>"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #94A3B8; font-size: 11px;\">Visible quand la main est détectée sur la surface</span>"}'
+    - // @input SceneObject paper_loading
+    - // @input SceneObject paper_anim
+    - // @input SceneObject text_phase2
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Logging</span>"}'
+    - '// @input bool enableLoggingLifecycle {"hint":"Enable lifecycle logging"}'

@@ -1,0 +1,126 @@
+- !<AssetImportMetadata/933d6db5-749d-4bac-bffb-140f085c3bd5>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 247b09ee-a2c9-4d44-abcd-35a404f68e2a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 247b09ee-a2c9-4d44-abcd-35a404f68e2a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ddafa709-9ff8-4ea4-b7af-47f7a9e967e3
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ddafa709-9ff8-4ea4-b7af-47f7a9e967e3>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 708b35f9-1b89-4e3e-9405-220481aec6b5
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    btn_home: false
+    btn_home_asset: false
+    btn_home_assets: false
+    btn_trigger: false
+    btn_trigger_asset: false
+    btn_trigger_assets: false
+    cameraWarmupTimeout: false
+    elements_hide: false
+    elements_show: false
+    fillFrame: false
+    freezeLiveFallback: false
+    freezeQuality: false
+    keepCameraOpen: false
+    labelDistance: false
+    labelFollowSpeed: false
+    labelFollowsHead: false
+    labelHeightOffset: false
+    labelText: false
+    livePreviewImage: false
+    lockPhotoScale: false
+    msgCaptureFailed: false
+    photoImage: false
+    photoScale: false
+    releaseDelay: false
+    retryDelay: false
+    stillAttempts: false
+    useDepthSessionKeepAlive: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - btn_trigger: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_trigger_asset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_trigger_assets: !<reference.Texture[]>
+        []
+      btn_home: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_home_asset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_home_assets: !<reference.Texture[]>
+        []
+      labelText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      labelFollowsHead: true
+      labelDistance: !<float> 70.000000
+      labelFollowSpeed: !<float> 10.000000
+      labelHeightOffset: !<float> 0.000000
+      photoImage: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      lockPhotoScale: true
+      photoScale: !<Vec3> {x: 287.461304, y: 414.389709, z: 133.333298}
+      fillFrame: true
+      elements_hide: !<reference.SceneObject[]>
+        []
+      elements_show: !<reference.SceneObject[]>
+        []
+      keepCameraOpen: true
+      stillAttempts: !<float> 2.000000
+      retryDelay: !<float> 1.000000
+      releaseDelay: 0.350000
+      freezeLiveFallback: true
+      freezeQuality: !<float> 3.000000
+      msgCaptureFailed: Capture failed — try again
+      livePreviewImage: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      cameraWarmupTimeout: !<float> 3.000000
+      useDepthSessionKeepAlive: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject btn_trigger {"hint":"Le bouton pour déclencher la photo"}'
+    - '// @input SceneObject btn_trigger_asset {"hint":"SceneObject qui reçoit la texture du bouton trigger"}'
+    - '// @input Asset.Texture[] btn_trigger_assets = {} {"hint":"Textures bouton trigger : [0] = init, [1] = hover"}'
+    - "// @input SceneObject btn_home {\"hint\":\"Le bouton home affiché dans l'écran de capture\"}"
+    - '// @input SceneObject btn_home_asset {"hint":"SceneObject qui reçoit la texture du bouton home"}'
+    - '// @input Asset.Texture[] btn_home_assets = {} {"hint":"Textures bouton home : [0] = init, [1] = hover"}'
+    - '// @input Component.Text labelText {"hint":"Texte affichant le message puis 3, 2, 1, Go!"}'
+    - '// @input bool labelFollowsHead = true {"hint":"Le texte du countdown suit la tête (reste visible en regardant le dessin en bas)."}'
+    - '// @input float labelDistance = 70 {"hint":"Distance du texte devant la caméra (cm)."}'
+    - '// @input float labelFollowSpeed = 10 {"hint":"Vitesse de suivi du texte (plus = plus rapide)."}'
+    - '// @input float labelHeightOffset {"hint":"Décalage vertical du texte (cm) : positif = plus haut, pour ne pas couvrir le dessin. 0 = centré."}'
+    - '// @input SceneObject photoImage {"hint":"SceneObject Image qui affiche la photo (ratio A4 1:1.414)"}'
+    - "// @input bool lockPhotoScale = true {\"hint\":\"Verrouille l'échelle du cadre photo à une valeur fixe (voir Photo Scale ci-dessous).\"}"
+    - '// @input vec3 photoScale = {287.4613,414.3897,133.3333} {"hint":"Échelle fixe du cadre photo (x, y, z)."}'
+    - '// @input bool fillFrame = true {"hint":"ON = la photo remplit tout le cadre en gardant le ratio (rogne le surplus). OFF = la photo rentre entière (bandes vides)."}'
+    - '// @input SceneObject[] elements_hide = {} {"hint":"Objets invisibles pendant le countdown — redeviennent visibles au tap home"}'
+    - '// @input SceneObject[] elements_show = {} {"hint":"Objets visibles après la photo — redeviennent invisibles au tap home"}'
+    - "// @input bool keepCameraOpen = true {\"hint\":\"Ouvre le flux caméra au démarrage et le garde ouvert. OBLIGATOIRE : c'est ce flux, maintenu actif, qui rend requestImage() fiable.\"}"
+    - '// @input float stillAttempts = 2 {"hint":"Nombre de tentatives de capture haute résolution avant de passer au freeze du flux live."}'
+    - '// @input float retryDelay = 1 {"hint":"Délai (s) entre deux tentatives de capture. On attend en plus une nouvelle frame caméra, pour ne pas re-déclencher une tâche inachevée."}'
+    - "// @input float releaseDelay = 0.35 {\"hint\":\"Délai (s) après avoir relâché l'ancienne photo, avant de demander la nouvelle.\"}"
+    - '// @input bool freezeLiveFallback = true {"hint":"Si la capture HD échoue : fige le flux live (copyFrame — snapshot synchrone de la frame courante)."}'
+    - '// @input float freezeQuality = 3 {"hint":"Qualité JPEG du freeze de dernier recours (encode/decode) : 0=MaxCompression, 1=Low, 2=Intermediate, 3=High, 4=MaxQuality. Utilisé seulement si copyFrame() échoue."}'
+    - "// @input string msgCaptureFailed = \"Capture failed — try again\" {\"hint\":\"Message affiché si aucune image n'a pu être obtenue.\"}"
+    - '// @input SceneObject livePreviewImage {"hint":"OPTIONNEL — SceneObject Image qui affiche le flux caméra live (viewfinder). Non requis : le listener onNewFrame suffit à garder la caméra active. À renseigner si tu veux voir le flux, ou en ceinture-bretelles."}'
+    - "// @input float cameraWarmupTimeout = 3 {\"hint\":\"Temps max (s) d'attente d'une frame caméra fraîche avant de tenter une capture. 0 = ne pas attendre (déconseillé).\"}"
+    - '// @input bool useDepthSessionKeepAlive {"hint":"OPTIONNEL — démarre aussi une DepthFrameSession pour maintenir le pipeline caméra actif (ce que fait ClothingScanner). Normalement INUTILE ici, et coûteux en énergie. À activer seulement si la capture reste capricieuse."}'

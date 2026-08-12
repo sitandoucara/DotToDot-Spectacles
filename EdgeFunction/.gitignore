@@ -1,0 +1,10 @@
+# supabase CLI local state (contains your project ref and local keys)
+supabase/.temp/
+supabase/.branches/
+
+# local env
+.env
+.env.local
+
+# os
+.DS_Store

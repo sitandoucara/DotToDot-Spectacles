@@ -1,0 +1,63 @@
+- !<AssetImportMetadata/64aedfc8-f68f-422b-b9e5-a8eb26d3f1e3>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 4d7b35e8-efec-45f7-b0e4-aab067ad6c0a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 4d7b35e8-efec-45f7-b0e4-aab067ad6c0a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> a1492ae8-2e4f-4046-8c1b-bed30cad9996
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/a1492ae8-2e4f-4046-8c1b-bed30cad9996>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    assets: false
+    info: false
+    on_paper: false
+    on_paper2: false
+    scaleMax: false
+    scaleMin: false
+    slider: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - slider: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      on_paper: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      on_paper2: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      assets: !<reference.Texture[]>
+        []
+      info: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      scaleMin: 0.500000
+      scaleMax: !<float> 2.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject slider {"hint":"La boule du slider (doit avoir Interactable + InteractableManipulation)"}'
+    - '// @input SceneObject on_paper {"hint":"SceneObject #1 dont le scale change selon la position du slider"}'
+    - '// @input SceneObject on_paper2 {"hint":"SceneObject #2 dont le scale change selon la position du slider (même logique)"}'
+    - '// @input Asset.Texture[] assets = {} {"hint":"Textures du slider : [0] = base, [1] = hover"}'
+    - "// @input SceneObject info {\"hint\":\"SceneObject d'indication — devient invisible dès que le user déplace le curseur\"}"
+    - '// @input float scaleMin = 0.5 {"hint":"Scale quand la boule est à gauche (min)"}'
+    - '// @input float scaleMax = 2 {"hint":"Scale quand la boule est à droite (max)"}'

@@ -1,0 +1,107 @@
+- !<AssetImportMetadata/48a6e47f-4fca-4b37-b005-d56e612a0d3a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3383d497-5564-4968-b869-0f5a97b8bc36
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3383d497-5564-4968-b869-0f5a97b8bc36
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 8eb93948-7a21-4b2f-aadf-9a5d6def201e
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/8eb93948-7a21-4b2f-aadf-9a5d6def201e>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    btnNextAsset: false
+    btnNextAssets: false
+    btnPrevAsset: false
+    btnPrevAssets: false
+    hoverItem: false
+    itemDotCounts: false
+    itemLabels: false
+    item_novisible: false
+    item_visible: false
+    items: false
+    labelText: false
+    nextButton: false
+    no_range: false
+    on_paper: false
+    onpaper_assets: false
+    previousButton: false
+    scale_info: false
+    show_dot: false
+    showdot_assets: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - items: !<reference.SceneObject[]>
+        []
+      hoverItem: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      itemDotCounts: !<float[]>
+        []
+      item_visible: !<reference.SceneObject[]>
+        []
+      item_novisible: !<reference.SceneObject[]>
+        []
+      show_dot: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      showdot_assets: !<reference.Texture[]>
+        []
+      on_paper: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      onpaper_assets: !<reference.Texture[]>
+        []
+      nextButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnNextAsset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnNextAssets: !<reference.Texture[]>
+        []
+      previousButton: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnPrevAsset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnPrevAssets: !<reference.Texture[]>
+        []
+      labelText: !<reference.Text> 00000000-0000-0000-0000-000000000000
+      itemLabels: !<string[]>
+        []
+      scale_info: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      no_range: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject[] items = {} {"hint":"Tous les boutons de la grille, groupes de 6"}'
+    - '// @input SceneObject hoverItem {"hint":"Objet qui se place sur le bouton de grille survolé"}'
+    - '// @input float[] itemDotCounts = {} {"hint":"Nombre de dots par item — même ordre que items[]"}'
+    - '// @input SceneObject[] item_visible = {} {"hint":"Objets qui deviennent VISIBLES au tap sur un item"}'
+    - '// @input SceneObject[] item_novisible = {} {"hint":"Objets qui deviennent INVISIBLES au tap sur un item"}'
+    - '// @input SceneObject show_dot {"hint":"SceneObject qui affiche le dessin dot sélectionné"}'
+    - '// @input Asset.Texture[] showdot_assets = {} {"hint":"Textures dans le même ordre que items[]"}'
+    - '// @input SceneObject on_paper {"hint":"SceneObject affiché sur la feuille"}'
+    - '// @input Asset.Texture[] onpaper_assets = {} {"hint":"Textures dans le même ordre que items[]"}'
+    - '// @input SceneObject nextButton {"hint":"Bouton page suivante"}'
+    - '// @input SceneObject btnNextAsset {"hint":"SceneObject qui reçoit la texture du bouton Next"}'
+    - '// @input Asset.Texture[] btnNextAssets = {} {"hint":"Textures bouton Next : [0] = base, [1] = hover"}'
+    - '// @input SceneObject previousButton {"hint":"Bouton page précédente"}'
+    - '// @input SceneObject btnPrevAsset {"hint":"SceneObject qui reçoit la texture du bouton Previous"}'
+    - '// @input Asset.Texture[] btnPrevAssets = {} {"hint":"Textures bouton Previous : [0] = base, [1] = hover"}'
+    - '// @input Component.Text labelText {"hint":"Texte qui affiche le nom du dot sélectionné"}'
+    - '// @input string[] itemLabels = {} {"hint":"Noms des dots dans le même ordre que items[]"}'
+    - '// @input SceneObject scale_info {"hint":"Indication pour le slider de scale — visible une seule fois au premier tap"}'
+    - "// @input SceneObject no_range {\"hint\":\"Image affichée UNIQUEMENT quand aucun dot n'est dans la plage choisie (invisible sinon)\"}"

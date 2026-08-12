@@ -1,0 +1,54 @@
+- !<AssetImportMetadata/1efb88d6-5011-407d-85a9-4b7ecef09abb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> f6bff8b2-b300-4336-bd8d-6055e975e71f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> f6bff8b2-b300-4336-bd8d-6055e975e71f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d04357a1-59df-4264-95d5-6630095f986a
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d04357a1-59df-4264-95d5-6630095f986a>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    assets: false
+    audio: false
+    btn_asset: false
+    btn_music: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - btn_music: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btn_asset: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      audio: !<reference.AudioComponent> 00000000-0000-0000-0000-000000000000
+      assets: !<reference.Texture[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject btn_music {"hint":"Le bouton musique (collider + interaction)"}'
+    - "// @input SceneObject btn_asset {\"hint\":\"L'objet qui reçoit la texture\"}"
+    - '// @input Component.AudioComponent audio {"hint":"Composant audio à contrôler"}'
+    - '// @input Asset.Texture[] assets = {} {"hint":"[0] ON base | [1] OFF base | [2] hover ON | [3] hover OFF"}'

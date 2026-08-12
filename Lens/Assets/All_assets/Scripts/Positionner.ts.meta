@@ -1,0 +1,71 @@
+- !<AssetImportMetadata/efd18793-b692-478d-9941-23bab9107b2e>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> fa5f4037-6590-4ceb-9cdf-2ce2d13a84e9
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> fa5f4037-6590-4ceb-9cdf-2ce2d13a84e9
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> de68104f-d775-4c0e-ac23-2eb446bb41e6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/de68104f-d775-4c0e-ac23-2eb446bb41e6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    btnY: false
+    btnY_assets: false
+    btnY_emitter: false
+    btnY_texture: false
+    btnZ: false
+    btnZ_assets: false
+    btnZ_emitter: false
+    btnZ_texture: false
+    targets: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - targets: !<reference.SceneObject[]>
+        []
+      btnY: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnY_emitter: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnY_texture: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnY_assets: !<reference.Texture[]>
+        []
+      btnZ: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnZ_emitter: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnZ_texture: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      btnZ_assets: !<reference.Texture[]>
+        []
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @input SceneObject[] targets = {} {"hint":"Tableau des SceneObjects à déplacer"}'
+    - // @input SceneObject btnY
+    - // @input SceneObject btnY_emitter
+    - // @input SceneObject btnY_texture
+    - "// @input Asset.Texture[] btnY_assets = {}"
+    - // @input SceneObject btnZ
+    - // @input SceneObject btnZ_emitter
+    - // @input SceneObject btnZ_texture
+    - "// @input Asset.Texture[] btnZ_assets = {}"

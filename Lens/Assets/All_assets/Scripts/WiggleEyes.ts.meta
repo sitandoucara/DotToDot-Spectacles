@@ -1,0 +1,120 @@
+- !<AssetImportMetadata/50735308-0be2-496c-b520-0b0fb591a094>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 5c3db147-86a5-459a-89ba-c83ca7401f13
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 5c3db147-86a5-459a-89ba-c83ca7401f13
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> aab6e559-d039-4c38-a23d-9c43eb3faed4
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/aab6e559-d039-4c38-a23d-9c43eb3faed4>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  ComponentUid: 3f17e6bc-0cc2-4c59-84cc-52491ce56dab
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    deadZone: false
+    deadZoneMargin: false
+    directionSmooth: false
+    dot0: false
+    dot1: false
+    dot10: false
+    dot11: false
+    dot12: false
+    dot13: false
+    dot14: false
+    dot15: false
+    dot2: false
+    dot3: false
+    dot4: false
+    dot5: false
+    dot6: false
+    dot7: false
+    dot8: false
+    dot9: false
+    eye: false
+    hysteresisDeg: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - eye: !<reference.SceneObject> 00000000-0000-0000-0000-000000000000
+      dot0: !<reference.Texture[]>
+        []
+      dot1: !<reference.Texture[]>
+        []
+      dot2: !<reference.Texture[]>
+        []
+      dot3: !<reference.Texture[]>
+        []
+      dot4: !<reference.Texture[]>
+        []
+      dot5: !<reference.Texture[]>
+        []
+      dot6: !<reference.Texture[]>
+        []
+      dot7: !<reference.Texture[]>
+        []
+      dot8: !<reference.Texture[]>
+        []
+      dot9: !<reference.Texture[]>
+        []
+      dot10: !<reference.Texture[]>
+        []
+      dot11: !<reference.Texture[]>
+        []
+      dot12: !<reference.Texture[]>
+        []
+      dot13: !<reference.Texture[]>
+        []
+      dot14: !<reference.Texture[]>
+        []
+      dot15: !<reference.Texture[]>
+        []
+      deadZone: !<float> 5.000000
+      directionSmooth: !<float> 15.000000
+      hysteresisDeg: !<float> 8.000000
+      deadZoneMargin: 1.500000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - "// @input SceneObject eye {\"hint\":\"SceneObject de l'oeil qui reçoit la texture\"}"
+    - '// @input Asset.Texture[] dot0 = {} {"hint":"Dot 0  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot1 = {} {"hint":"Dot 1  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot2 = {} {"hint":"Dot 2  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot3 = {} {"hint":"Dot 3  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot4 = {} {"hint":"Dot 4  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot5 = {} {"hint":"Dot 5  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot6 = {} {"hint":"Dot 6  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot7 = {} {"hint":"Dot 7  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot8 = {} {"hint":"Dot 8  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot9 = {} {"hint":"Dot 9  — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot10 = {} {"hint":"Dot 10 — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot11 = {} {"hint":"Dot 11 — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot12 = {} {"hint":"Dot 12 — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot13 = {} {"hint":"Dot 13 — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot14 = {} {"hint":"Dot 14 — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - '// @input Asset.Texture[] dot15 = {} {"hint":"Dot 15 — [0]A [1]B [2]C [3]D [4]E [5]F [6]G [7]H [8]I"}'
+    - "// @input float deadZone = 5 {\"hint\":\"Distance minimale du doigt pour que l'oeil bouge (zone morte main)\"}"
+    - '// @input float directionSmooth = 15 {"hint":"Lissage de la direction : plus grand = plus réactif, plus petit = plus doux (5-30). Défaut 15."}'
+    - "// @input float hysteresisDeg = 8 {\"hint\":\"Marge anti-flicker aux frontières de directions, en degrés (0-20). Plus grand = l'oeil tient mieux sa direction. Défaut 8.\"}"
+    - '// @input float deadZoneMargin = 1.5 {"hint":"Marge de la zone morte pour éviter le clignotement centre <-> mouvement. Défaut 1.5."}'
