@@ -1,8 +1,10 @@
 # DOT TO DOT — Spectacles
 
-> A cozy connect-the-dots puzzle you play on a real sheet of paper with Snap Spectacles. Place a flat hand on the page, follow the numbers with a real pencil, and reveal a hidden shape. When you're done, photograph your drawing and pin it to a shared wall anyone can browse from a phone or laptop.
+**[See the wall →](https://dottodotwall.netlify.app/)** · **[Try the Lens →](https://www.spectacles.com/lens/2b433d83855e48ddb2d6b686bade9b02?type=SNAPCODE&metadata=01)**
 
-https://github.com/user-attachments/assets/55e66d1b-99f7-43d0-a197-85bee2b9c34b
+> A cozy connect-the-dots puzzle you play on a real sheet of paper with Snap Spectacles. Place a flat hand on the page, follow the numbers with a real pencil, and reveal a hidden shape. When you're done you can switch on the googly eyes and play with your drawing, or photograph it and pin it to a shared wall anyone can browse from a phone or laptop.
+
+https://github.com/user-attachments/assets/bffcb113-6111-4b61-882a-f06bdb5e031e
 
 ---
 
@@ -10,7 +12,7 @@ https://github.com/user-attachments/assets/55e66d1b-99f7-43d0-a197-85bee2b9c34b
 
 Dot to Dot is a relaxing connect-the-dots game played in augmented reality. The user puts a sheet of paper down, rests a flat hand on it, and the Lens projects a numbered dot puzzle onto the page. Following the numbers in order with a real pencil reveals the hidden illustration — and once it's finished, a bonus button shows a colored version of the same drawing for inspiration.
 
-What makes this more than a single-session game is what happens **after** the drawing. The Lens photographs the finished sheet through the Spectacles camera, uploads it to Supabase, and the drawing appears on a public wall — a companion web app anyone can open, with no account and no name attached. Draw, share, come back later and see what other people made.
+And once the drawing is done, two optional things are waiting. A fun button drops a pair of googly eyes onto your sheet that follow your hand around — you can toggle them on and off freely. And a camera button photographs the finished page through the Spectacles camera and, if you tap Share, sends it to a public wall: a companion web app anyone can open, with no account and no name attached. Both are entirely optional — the game is complete without either.
 
 Placement relies on Snap's `SurfacePlacement` package, configured here in flat-palm mode so the user can hold a pencil in the other hand. Everything after detection is custom: the placed elements are reorganized into a shared parent container so one lies flat on the paper while another floats upright in front of the user, both anchored to the same world position. Picker, range filter, sliders, position handles, finish flow, fun mode, music toggle, home button, capture and share are all built from scratch as independent TypeScript controllers.
 
@@ -37,13 +39,14 @@ Placement relies on Snap's `SurfacePlacement` package, configured here in flat-p
 - Finish + bonus reveal — swaps the puzzle for a decorated version and shows a colored illustration
 - Home button — full reset of every controller back to its initial state
 
-**Phase 3 — Fun mode**
+**Phase 3 — Fun mode (optional)**
 
-- After finishing a puzzle, a pair of eyes appears on the sheet and follows the user's hand
+- A dedicated button toggles a pair of googly eyes on the finished sheet. Off by default, and the user can switch them on and off at will
+- Once on, the eyes follow the user's hand around the page
 - The dominant hand's index tip drives the gaze across 8 directions plus a centered rest state, with a different eye set per puzzle
 - Direction is smoothed, and hysteresis is applied on both the sector boundaries and the dead zone, so the eyes hold their look instead of flickering between two neighbouring directions
 
-**Phase 4 — Capture and share**
+**Phase 4 — Capture and share (optional)**
 
 - Countdown capture (3 — 2 — 1 — Go) that photographs the finished sheet through the Spectacles camera at native resolution
 - A floating label follows the user's head during the countdown, so it stays readable while looking down at the paper
@@ -134,7 +137,7 @@ Two values come out of this step, and you'll need both:
 
 ### 4. Set up the Lens
 
-1. Open `Lens/Learn_draw_spec.esproj` in **Lens Studio 5.15.4** (or compatible).
+1. Open `Lens/DotToDot.esproj` in **Lens Studio 5.15.4** (or compatible).
 2. In **Project Settings → Permissions**, enable **Experimental APIs** and camera access, and allow outbound requests to `*.supabase.co`. Without this, capture and upload both fail.
 3. Select the object carrying the `SharePhoto` script and fill in:
    - `edgeFunctionUrl` — the function URL from step 3
@@ -214,19 +217,19 @@ The web app is a React + Vite SPA that reads the `photos` table with the anon ke
 
 Game logic lives in `Lens/Assets/All_assets/Scripts/`. The placement entry point lives inside the `SurfacePlacement.lspkg` package as `GlobalUI.ts` — renamed from the `Example.ts` shipped with the package, and modified to hook into this project's start board, paper loader and game container.
 
-| Script                   | Role                                                                                                                                                                               |
-| ------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `GlobalUI.ts`            | Entry point (inside `SurfacePlacement.lspkg`). Hides phase 2 UI, starts `SurfacePlacementController`, places the game and transmitter containers on detection.                     |
-| `DotPickerController.ts` | Paginated 6-per-page grid over 16 puzzles. Handles filtering, selection, labels, and texture swaps for `on_paper` and `show_dot`.                                                  |
-| `RangeSlider.ts`         | Two-handle min/max slider (15–64 dots) with a non-crossing clamp and a center-pivot fill bar. Drives the picker's filter.                                                          |
-| `ScaleSlider.ts`         | One-axis interactable ball that drives `on_paper.localScale` between a min and max. Always re-centered on activation.                                                              |
-| `Positionner.ts`         | Two drag handles that translate the targets in world space — one on Y, one on X and Z.                                                                                             |
-| `FinishController.ts`    | Finish button (decorated texture + visibility groups) and the show/hide bonus toggle.                                                                                              |
-| `WiggleEyes.ts`          | Eyes that follow the dominant hand's index tip across 8 directions plus center, with smoothing and hysteresis, and a distinct texture set per puzzle.                              |
-| `TakePhoto.ts`           | Countdown, head-following label, camera pipeline keep-alive, validated still capture with retries, live-texture freeze fallback, and strictly separated success and failure paths. |
-| `SharePhoto.ts`          | Reads the texture off the photo frame, encodes JPEG base64, POSTs to the Edge Function, guards against duplicate uploads, and optionally re-downloads the stored file as proof.    |
-| `MusicToogle.ts`         | On/off toggle for the background music, with hover textures and mode-aware repositioning.                                                                                          |
-| `HomeController.ts`      | Home button — orchestrates `reset()` on every other controller in sequence.                                                                                                        |
+| Script                   | Role                                                                                                                                                                                   |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GlobalUI.ts`            | Entry point (inside `SurfacePlacement.lspkg`). Hides phase 2 UI, starts `SurfacePlacementController`, places the game and transmitter containers on detection.                         |
+| `DotPickerController.ts` | Paginated 6-per-page grid over 16 puzzles. Handles filtering, selection, labels, and texture swaps for `on_paper` and `show_dot`.                                                      |
+| `RangeSlider.ts`         | Two-handle min/max slider (15–64 dots) with a non-crossing clamp and a center-pivot fill bar. Drives the picker's filter.                                                              |
+| `ScaleSlider.ts`         | One-axis interactable ball that drives `on_paper.localScale` between a min and max. Always re-centered on activation.                                                                  |
+| `Positionner.ts`         | Two drag handles that translate the targets in world space — one on Y, one on X and Z.                                                                                                 |
+| `FinishController.ts`    | Finish button (decorated texture + visibility groups) and the show/hide bonus toggle.                                                                                                  |
+| `WiggleEyes.ts`          | Optional googly eyes, toggled by a button. Follow the dominant hand's index tip across 8 directions plus center, with smoothing and hysteresis, and a distinct texture set per puzzle. |
+| `TakePhoto.ts`           | Countdown, head-following label, camera pipeline keep-alive, validated still capture with retries, live-texture freeze fallback, and strictly separated success and failure paths.     |
+| `SharePhoto.ts`          | Reads the texture off the photo frame, encodes JPEG base64, POSTs to the Edge Function, guards against duplicate uploads, and optionally re-downloads the stored file as proof.        |
+| `MusicToggle.ts`         | On/off toggle for the background music, with hover textures and mode-aware repositioning.                                                                                              |
+| `HomeController.ts`      | Home button — orchestrates `reset()` on every other controller in sequence.                                                                                                            |
 
 The rest of `SurfacePlacement.lspkg` is Snap's original release, with one modified script (`TableTop.ts`) that integrates the start board and paper loader hooks expected by `GlobalUI.ts`. Every other file inside the package is untouched.
 
@@ -329,7 +332,3 @@ MIT License — see [LICENSE](LICENSE) for details.
 Designed and developed by **Sitan Doucara** ([Si.Graph](https://github.com/sitandoucara)).
 
 Built on top of Snap's [SurfacePlacement](https://ar.snap.com/lens-studio) package, configured for flat-palm detection and customized for paper-based gameplay. Cloud sharing built on [Supabase](https://supabase.com). Made for [Spectacles](https://ar.snap.com/spectacles).
-
----
-
-Website link : https://dottodotwall.netlify.app/
